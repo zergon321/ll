@@ -82,7 +82,7 @@ func (l *AmortizedList[T]) remove(e *Element[T]) {
 	e.list = nil
 	l.len--
 
-	l.memory.insert(e, l.memory.Back())
+	l.memory.insert(e, l.memory.root.prev)
 }
 
 // move moves e to next to at.
